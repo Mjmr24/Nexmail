@@ -1,0 +1,6 @@
+framework module Pods_Nexmail_1_0__28_jun_2017_ {
+  umbrella header "Pods-Nexmail 1.0 (28-jun-2017)-umbrella.h"
+
+  export *
+  module * { export * }
+}
