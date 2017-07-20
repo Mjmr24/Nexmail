@@ -13,7 +13,7 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var tableView: UITableView!
     
-    var folders:Mail?
+    var folders:FolderType?
     
     let mailList = ["¡Vente al Corte Inglés!", "Su seguro más barato", "Hola, soy Marta ¿Me quieres conocer?", "Trabajo final (versión definitiva 8)", "Rebaja semanal Game", "Su préstamo en 24h"]
     
@@ -21,7 +21,7 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let senderImages = ["El Corte Inglés - logo.jpg", "Axa - logo.jpg", "Chica sexy - logo.jpg", "Persona - logo.jpg", "Game - logo.png", "Evo Bank - Logo.jpg"]
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
             self.tableView.delegate = self
             self.tableView.dataSource = self
@@ -40,10 +40,10 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 56
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Seleccionó la fila \(indexPath.row) de la sección \(indexPath.section)")
         //self.tableView.deselectRow(at: indexPath, animated: true)
-    }
+    }*/
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mailList.count
     }

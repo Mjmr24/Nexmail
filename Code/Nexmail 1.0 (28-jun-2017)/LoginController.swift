@@ -37,7 +37,7 @@ class LoginController: UIViewController {
         let viewControllerDestination = segue.destination
     }
     @IBAction func ok() {
-        if username.text == "otrapersona@otracosamail.com" && password.text == "Dejameentrar"{
+        if username.text == "tiffany_animadora@oseamail.com" && password.text == "Martatesuperodio"{
             self.performSegue(withIdentifier: "loggingSegue", sender: nil) //Esta línea de código hace que se ejecute una flecha que me lleva al siguiente ViewController si se cumple la condición del if
         }
     }
