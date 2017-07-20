@@ -15,11 +15,13 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var folders:FolderType?
     
-    let mailList = ["¡Vente al Corte Inglés!", "Su seguro más barato", "Hola, soy Marta ¿Me quieres conocer?", "Trabajo final (versión definitiva 8)", "Rebaja semanal Game", "Su préstamo en 24h"]
+    var mailTypesArray :[Mail] = []//hacer un for in igualando el contenido de este array al tipo de contenido de la variable folders para que en la variable mailsTypes Array queden los tipos de correos que estén en la variable folders y se construya la tabla de este view controller con los  correos de una sola categoría
+    
+    /*let mailList = ["¡Vente al Corte Inglés!", "Su seguro más barato", "Hola, soy Marta ¿Me quieres conocer?", "Trabajo final (versión definitiva 8)", "Rebaja semanal Game", "Su préstamo en 24h"]
     
     let senderList = ["El Corte Inglés", "Axa seguros", "Chicas calientes", "Me", "Game", "Evo Bank"]
     
-    let senderImages = ["El Corte Inglés - logo.jpg", "Axa - logo.jpg", "Chica sexy - logo.jpg", "Persona - logo.jpg", "Game - logo.png", "Evo Bank - Logo.jpg"]
+    let senderImages = ["El Corte Inglés - logo.jpg", "Axa - logo.jpg", "Chica sexy - logo.jpg", "Persona - logo.jpg", "Game - logo.png", "Evo Bank - Logo.jpg"]*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
