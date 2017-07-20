@@ -9,12 +9,20 @@
 import UIKit
 
 class Mail {
+    var image = ""
     var subject = ""
     var from = ""
     var to = ""
     var body = ""
+    var folderType:FolderType = .inbox
     
-    func mailInformation(subject: String, from:String, to: String, body: String){
+    init(image: String, subject: String, from: String, to: String, body: String, folderType:FolderType){
+        self.image = image
+        self.subject = subject
+        self.from = from
+        self.to = to
+        self.body = body
+        self.folderType = folderType
+        
     }
-    self.mailInformation.init(subject: "", from:"", to: "", body: "")
-}
+ }

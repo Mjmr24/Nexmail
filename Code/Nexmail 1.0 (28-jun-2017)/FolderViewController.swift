@@ -53,4 +53,25 @@ class FolderViewController:UIViewController, UITableViewDelegate, UITableViewDat
         cell.folderTitleLabel.text = mailListFoldersName [indexPath.row]
         return cell
             }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MailViewController {
+            if let indice = self.folderTableView.indexPathForSelectedRow {//devuelveme el indice que se ha seleccionado, y si no hay ningún indice seleccionado, no entra. El valor del indexPathForSelectedRow de la folderTableview se va a guardar como valor de la variable indice.
+                
+                if indice.row == 0 {
+                     destination.folders = .inbox
+                }
+                else if indice.row == 1 {
+                    destination.folders = .sent
+                }
+                else if indice.row == 2 {
+                    destination.folders = .drafts
+                }
+                else if indice.row == 3 {
+                    destination.folders = .spam
+                }
+                
+                self.folderTableView.deselectRow(at: indice, animated: true)
+            }
+        }
+    }
 }
