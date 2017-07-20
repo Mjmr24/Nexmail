@@ -53,4 +53,12 @@ class FolderViewController:UIViewController, UITableViewDelegate, UITableViewDat
         cell.folderTitleLabel.text = mailListFoldersName [indexPath.row]
         return cell
             }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MailViewController {
+            if let indice = self.folderTableView.indexPathForSelectedRow {
+                destination.folders = ControllerData.shareController.array[indice.row]
+                self.folderTableView.deselectRow(at: indice, animated: true)
+            }
+        }
+    }
 }

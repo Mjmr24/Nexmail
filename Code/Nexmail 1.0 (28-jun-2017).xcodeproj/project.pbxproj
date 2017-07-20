@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB016F851F21019F009FC179 /* FolderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB016F841F21019F009FC179 /* FolderType.swift */; };
 		FB0E1EC61F040BA300AFB1BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E1EC51F040BA300AFB1BF /* AppDelegate.swift */; };
 		FB0E1EC81F040BA300AFB1BF /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E1EC71F040BA300AFB1BF /* MailViewController.swift */; };
 		FB0E1ECD1F040BA300AFB1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0E1ECC1F040BA300AFB1BF /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		3572B7BF3D8D3EC6D33B50CA /* Pods-Nexmail 1.0 (28-jun-2017).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nexmail 1.0 (28-jun-2017).release.xcconfig"; path = "Pods/Target Support Files/Pods-Nexmail 1.0 (28-jun-2017)/Pods-Nexmail 1.0 (28-jun-2017).release.xcconfig"; sourceTree = "<group>"; };
 		55F50289562827E33E3DA0CB /* Pods-Nexmail 1.0 (28-jun-2017).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nexmail 1.0 (28-jun-2017).debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nexmail 1.0 (28-jun-2017)/Pods-Nexmail 1.0 (28-jun-2017).debug.xcconfig"; sourceTree = "<group>"; };
 		EF8918254B4DD1060B1D2D3A /* Pods_Nexmail_1_0__28_jun_2017_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nexmail_1_0__28_jun_2017_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB016F841F21019F009FC179 /* FolderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderType.swift; sourceTree = "<group>"; };
 		FB0E1EC21F040BA300AFB1BF /* Nexmail 1.0 (28-jun-2017).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nexmail 1.0 (28-jun-2017).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0E1EC51F040BA300AFB1BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB0E1EC71F040BA300AFB1BF /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				FBEF874D1F06616500A1026C /* MailTableViewCell.swift */,
 				FB6381961F0BFAA200DFCFBE /* FolderTableViewCell.swift */,
 				FB11DB911F16805A009E96A1 /* Mail.swift */,
+				FB016F841F21019F009FC179 /* FolderType.swift */,
 				FB0E1EDC1F041EDA00AFB1BF /* SettingsTableViewCell.swift */,
 				FB0E1EDA1F041EB900AFB1BF /* User.swift */,
 			);
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB11DB901F167B11009E96A1 /* ControllerData.swift in Sources */,
+				FB016F851F21019F009FC179 /* FolderType.swift in Sources */,
 				FB0E1EC81F040BA300AFB1BF /* MailViewController.swift in Sources */,
 				FB11DB921F16805A009E96A1 /* Mail.swift in Sources */,
 				FB0E1EC61F040BA300AFB1BF /* AppDelegate.swift in Sources */,
