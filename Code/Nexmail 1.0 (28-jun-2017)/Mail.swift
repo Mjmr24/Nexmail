@@ -24,5 +24,7 @@ class Mail {
         self.body = body
         self.folderType = folderType
         
+        // con "self.image = image" estoy construyendo un puente que conecta la variable "image" que se declara dentro de la clase con la variable "image" que se espcifica dentro de los parámetros del init (image:String que está entre paréntesis)
+        
     }
  }

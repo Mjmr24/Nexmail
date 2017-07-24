@@ -33,7 +33,7 @@ class FolderViewController:UIViewController, UITableViewDelegate, UITableViewDat
         return 56
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Seleccionó la fila \(indexPath.row) de la sección \(indexPath.section)")//lo que dicen estas dos líneas de código: primera línea -> Del parámetro1 se va a omitir el nombre out y el nombre in es "tableView" y  este parámetro va a ser del tipo UITableView; el parámetro 2 tiene dos nombres (el nombre out: "didSelectRowAt" y el nombre in:"indexPath") y este parámetro va a ser del tipo IndexPath. Segunda línea -> lo que va a hacer es un print que va a imprimir: "Seleccionó la fila TAL de la selección CUAL". Esta función, lo que viene a hacer es que cada vez que seleccione una celda de la tabla, me va a hacer un print que diga "Seleccionó la fila AL de la sección CUAL".
+        print("Seleccionó la fila \(indexPath.row) de la sección \(indexPath.section)")//lo que dicen estas dos líneas de código: primera línea -> Del parámetro1 se va a omitir el nombre out y el nombre in es "tableView" y  este parámetro va a ser del tipo UITableView; el parámetro 2 tiene dos nombres (el nombre out: "didSelectRowAt" y el nombre in:"indexPath") y este parámetro va a ser del tipo IndexPath. Segunda línea -> lo que va a hacer es un print que va a imprimir: "Seleccionó la fila TAL de la selección CUAL". Esta función, lo que viene a hacer es que cada vez que seleccione una celda de la tabla, me va a hacer un print que diga "Seleccionó la fila TAL de la sección CUAL".
         self.folderTableView.deselectRow(at: indexPath, animated: true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +55,7 @@ class FolderViewController:UIViewController, UITableViewDelegate, UITableViewDat
             }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? MailViewController {
-            if let indice = self.folderTableView.indexPathForSelectedRow {//devuelveme el indice que se ha seleccionado, y si no hay ningún indice seleccionado, no entra. El valor del indexPathForSelectedRow de la folderTableview se va a guardar como valor de la variable indice.
+            if let indice = self.folderTableView.indexPathForSelectedRow {// significa devuelveme el indice que se ha seleccionado, y si no hay ningún indice seleccionado, no entra. El valor del indexPathForSelectedRow de la folderTableview se va a guardar como valor de la variable indice.
                 
                 if indice.row == 0 {
                      destination.folders = .inbox

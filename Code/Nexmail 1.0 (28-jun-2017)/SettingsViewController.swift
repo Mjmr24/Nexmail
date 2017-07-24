@@ -33,8 +33,12 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 56
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Seleccionó la fila \(indexPath.row) de la sección \(indexPath.section)")
+        if indexPath.row == 5 {
+            self.navigationController?.tabBarController?.dismiss(animated: true, completion: nil)
+        }
         self.settingsTableView.deselectRow(at: indexPath, animated: true)
+        /*print("Seleccionó la fila \(indexPath.row) de la sección \(indexPath.section)")
+         */
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settingsList.count

@@ -15,7 +15,9 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var folders:FolderType?
     
-    var mailTypesArray :[Mail] = []//hacer un for in igualando el contenido de este array al tipo de contenido de la variable folders para que en la variable mailsTypes Array queden los tipos de correos que estén en la variable folders y se construya la tabla de este view controller con los  correos de una sola categoría
+    var mailTypesArray :[Mail] = []//hacer un for in igualando el contenido de este array al tipo de contenido de la variable folders para que en la variable mailTypesArray queden los tipos de correos que estén en la variable folders y se construya la tabla de este view controller con los  correos de una sola categoría
+    
+    
     
     /*let mailList = ["¡Vente al Corte Inglés!", "Su seguro más barato", "Hola, soy Marta ¿Me quieres conocer?", "Trabajo final (versión definitiva 8)", "Rebaja semanal Game", "Su préstamo en 24h"]
     
@@ -25,6 +27,13 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for mail in ControllerData.shareController.array {
+            if mail.folderType == self.folders {
+                mailTypesArray.append(mail)
+            }
+        }
+        
             self.tableView.delegate = self
             self.tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,7 +56,7 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
         //self.tableView.deselectRow(at: indexPath, animated: true)
     }*/
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mailList.count
+        return mailTypesArray.count
     }
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -61,9 +70,10 @@ class MailViewController: UIViewController, UITableViewDelegate, UITableViewData
         //la variable de abajo es para reutilizar celdas. El código para no reutilizar celdas sería:
         //let cell = UITableViewCell.init(style: .default, resourceIdentifier: "mycellId")
         let cell = tableView.dequeueReusableCell(withIdentifier: "mailCell") as! MailTableViewCell
-        cell.titleLabel.text = mailList [indexPath.row]
-        cell.subTitleLabel.text = senderList [indexPath.row]
-        cell.photo.image = UIImage.init(named: senderImages [indexPath.row])
+        cell.titleLabel.text = mailTypesArray[indexPath.row].subject
+        cell.subTitleLabel.text = mailTypesArray [indexPath.row].from
+        cell.photo.image = UIImage.init(named: mailTypesArray [indexPath.row].image)
+        // una forma de acortar el código en estas tres líneas de código anteriores sería guardar el valor "mailsTypesArray" en una variable para poder poner el nombre de esa variable y llamar a su atribito directamente. sería algo así: (nombredelavariable.nombredelatributo), o lo que es lo mismo, si la variable se llamase mail, sería: (mail(cuyo valor es mailTypesArray[indexPath.row]).subject)
         return cell
         
         /*if cell == nil {
